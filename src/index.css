@@ -5,6 +5,8 @@ body {
 
 :root {
   --primary-text-color: #303030;
+  --primary-border-color: #303030;
   --gray-light: #a5a5a5;
+  --gray-lighter: #dddddd;
   --text-cross: "✕";
 }

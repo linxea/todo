@@ -15,7 +15,6 @@ const TodoList = (props: TodoListInterface) => (
           />
         </li>
       ))}
-      <li></li>
     </ul>
   </div>
 );

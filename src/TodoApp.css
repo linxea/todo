@@ -1,10 +1,16 @@
+button,
+input,
+div,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .todo-app {
   height: 100%;
   width: 80%;
-  min-width: 300px;
   max-width: 450px;
   margin: 0 auto;
-  color: var(--primary-txt-color);
+  color: var(--primary-text-color);
   padding-top: 100px;
 }
 
@@ -20,6 +26,8 @@ input[type="text"] {
   padding: 15px 15px;
   outline: none;
   box-sizing: border-box;
+  background: none;
+  border: none;
 }
 
 input[type="text"]::placeholder {
@@ -28,11 +36,15 @@ input[type="text"]::placeholder {
   opacity: 1; /* Firefox */
 }
 
+.todo-form {
+  border: 1px solid var(--gray-lighter);
+}
+
 .todo-item {
   display: flex;
   justify-content: space-between;
   font-size: 1.2em;
-  padding: 2px 0;
+  padding: 3px 0;
 }
 
 .todo-item-text {
@@ -42,6 +54,7 @@ input[type="text"]::placeholder {
   outline: none;
   padding: 0 10px;
   flex: 1;
+  min-width: 100px;
 }
 
 .todo-item-remove::before {
@@ -54,16 +67,18 @@ input[type="text"]::placeholder {
 
 .checkbox-empty,
 .checkbox-complete {
-  border: 2px solid black;
-  min-width: 20px;
-  height: 20px;
+  border: 2px solid var(--primary-border-color);
+  min-width: 25px;
+  height: 25px;
 }
 
 .checkbox-complete::before {
   content: var(--text-cross);
   width: 100%;
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .checkbox-empty,
